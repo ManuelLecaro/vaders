@@ -7,8 +7,7 @@ import ipaddress
 from scapy.all import *
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sb
+
 from sklearn.cluster import KMeans
 from sklearn.metrics import pairwise_distances_argmin_min
 from sklearn.ensemble import IsolationForest
@@ -25,7 +24,7 @@ def process_pcap(file_name, domain):
 def extract_data(file_name, domain):
     client = socket.gethostbyname(domain)
     print('domain ip is: ' + client)
-    client = '192.168.0.6'
+    
     count = 0
 
     data_list = []
@@ -101,11 +100,14 @@ if __name__ == '__main__':
     parser.add_argument('--pcap', metavar='<pcap file name>',
                         help='pcap file to parse', required=True)
     parser.add_argument('--domain', metavar='<domain name>',
-                        help='domain to check phishing', required=True)
+                        help='domain to check phishing', required=False)
     args = parser.parse_args()
-    
+    domain = '192.168.0.6'
     file_name = args.pcap
-    domain = args.domain
+
+    if not args.domain is None:
+        print('here')
+        domain = args.domain
     if not os.path.isfile(file_name):
         print('"{}" does not exist'.format(file_name), file=sys.stderr)
         sys.exit(-1)
