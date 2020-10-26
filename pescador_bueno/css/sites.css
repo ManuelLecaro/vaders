@@ -1,0 +1,67 @@
+.center{
+    text-align: center;
+    padding: 20px;
+}
+
+.title{
+    font-size: 30px;
+    color: #2F4858;
+}
+
+.option-container{
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px #F0EFEB solid;
+    
+}
+
+.site{
+    font-size: 15px;
+    color: #2F4858;
+}
+
+.site-title{
+    padding-left: 20px;
+    padding-top: 0;
+    background-color:#F0EFEB;
+    border-radius: 10px;
+    border: 1px #C0C0C0 solid;
+    display: flex;
+}
+
+.text{
+    padding-left:10px;
+    color: #2F4858;
+}
+
+button{
+    height: 20px;
+    align-self: center;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px white solid;
+    background-color: white;
+    font-size: smaller;
+}
+
+.section{
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #2F4858;
+}
+
+li{
+    margin: 10px;
+    color: #2F4858;
+    width: 1em;
+}
+
+.data{
+    margin: 5px;
+}
+
+hr.rounded {
+    border-top: 5px solid #B8B7B3;
+    border-radius: 5px;
+}
